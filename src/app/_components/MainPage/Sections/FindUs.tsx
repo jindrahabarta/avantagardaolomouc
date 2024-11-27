@@ -15,7 +15,9 @@ const FindUs = () => {
                         className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                     >
                         <MapPinIcon className='w-6 h-fit fill-orange ' />
-                        <span>Sokolská 22 770 01 Olomouc</span>
+                        <span className='h-fit'>
+                            Sokolská 22 770 01 Olomouc
+                        </span>
                     </Link>
                     <Link
                         href={'mailto:'}
