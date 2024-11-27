@@ -8,40 +8,50 @@ const FindUs = () => {
     return (
         <section id='kontakt' className='pt-24'>
             <div className='flex flex-col sm:flex-row'>
-                <div className='flex-3 flex flex-col gap-2 text-xl'>
+                <div className='flex-3 text-xl'>
                     <h2>Kontaktní informace</h2>
-                    <Link
-                        href={''}
-                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
-                    >
-                        <MapPinIcon className='w-6 h-fit fill-orange ' />
-                        <span className='h-fit'>
-                            Sokolská 22 770 01 Olomouc
-                        </span>
-                    </Link>
-                    <Link
-                        href={'mailto:'}
-                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
-                    >
-                        <EmailIcon className='w-6 h-fit fill-orange' />
-                        <span>solbank@seznam.cz</span>
-                    </Link>
-                    <Link
-                        href={''}
-                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
-                    >
-                        <PhoneIcon className='w-6 h-fit fill-orange' />
-                        <span>+420 737 331 132</span>
-                    </Link>
-                    <h2 className='mt-2'>Otevírací doba</h2>
-                    <p>
+
+                    <ul>
+                        <li className='mt-2'>
+                            <Link
+                                href={''}
+                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                            >
+                                <MapPinIcon className='w-6 h-fit fill-orange ' />
+                                <span className='h-fit'>
+                                    Sokolská 22 770 01 Olomouc
+                                </span>
+                            </Link>
+                        </li>
+                        <li className='mt-2'>
+                            <Link
+                                href={'mailto:'}
+                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                            >
+                                <EmailIcon className='w-6 h-fit fill-orange' />
+                                <span>solbank@seznam.cz</span>
+                            </Link>
+                        </li>
+                        <li className='mt-2'>
+                            <Link
+                                href={''}
+                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                            >
+                                <PhoneIcon className='w-6 h-fit fill-orange' />
+                                <span>+420 737 331 132</span>
+                            </Link>
+                        </li>
+                    </ul>
+
+                    <h2 className='mt-4'>Otevírací doba</h2>
+                    <p className='mt-2'>
                         <span className='font-semibold'>Po - Pá:</span> 9:00 -
                         20:00
                     </p>
-                    <p>
+                    <p className='mt-2'>
                         <span className='font-semibold'>So:</span> 9:00 - 20:00
                     </p>
-                    <p>
+                    <p className='mt-2'>
                         <span className='font-semibold'>Ne:</span> ZAVŘENO
                     </p>
                 </div>
