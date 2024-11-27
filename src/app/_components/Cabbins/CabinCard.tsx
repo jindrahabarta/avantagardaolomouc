@@ -8,10 +8,12 @@ import Tag from '../ui/Tag'
 const CabinCard = ({
     img,
     title,
+    tag,
     price,
 }: {
     img?: string
     title: string
+    tag: string
     price: number
 }) => {
     return (
@@ -27,7 +29,7 @@ const CabinCard = ({
             </figure>
             <Tag
                 className='absolute top-4 left-4 bg-white group-hover/cabbinCard:bg-orange group-hover/cabbinCard:text-white'
-                text='Kabinka č.1'
+                text={tag}
             ></Tag>
 
             <div className='relative w-full'>

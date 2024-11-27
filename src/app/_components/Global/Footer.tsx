@@ -10,9 +10,9 @@ import FacebookIcon from '../icons/FacebookIcon'
 const Footer = () => {
     return (
         <footer className='w-full px-5 '>
-            <div className='bg-silver/70 rounded-t-2xl p-10 pb-2'>
-                <div className='flex justify-between'>
-                    <div>
+            <div className='bg-silver/70 rounded-2xl p-10 pb-2 shadow-sm'>
+                <div className='flex justify-between gap-10 flex-col sm:flex-row'>
+                    <div className='flex-1'>
                         <Link href={'/#uvod'}>
                             <Image
                                 src={Logo}
@@ -71,7 +71,56 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                    <div>alksdjfl</div>
+                    <div className='flex-1'>
+                        <h3 className='sm:text-2xl text-xl'>Otevírací doba</h3>
+
+                        <p className='mt-2'>
+                            <span className='font-semibold'>Po - Pá:</span> 9:00
+                            - 20:00
+                        </p>
+                        <p className='mt-2'>
+                            <span className='font-semibold'>So:</span> 9:00 -
+                            20:00
+                        </p>
+                        <p className='mt-2'>
+                            <span className='font-semibold'>Ne:</span> ZAVŘENO
+                        </p>
+                    </div>
+
+                    <div className='flex-1'>
+                        <h3 className='sm:text-2xl text-xl'>Odkazy</h3>
+                        <ul>
+                            <li className='mt-2'>
+                                <Link href={'/#uvod'} className='font-semibold'>
+                                    Úvod
+                                </Link>
+                            </li>
+                            <li className='mt-2'>
+                                <Link
+                                    href={'/#o-nas'}
+                                    className='font-semibold'
+                                >
+                                    O nás
+                                </Link>
+                            </li>
+                            <li className='mt-2'>
+                                <Link
+                                    href={'/#kabinky'}
+                                    className='font-semibold'
+                                >
+                                    Kabinky
+                                </Link>
+                            </li>
+                            <li className='mt-2'>
+                                <Link
+                                    href={'/#galerie'}
+                                    className='font-semibold'
+                                >
+                                    Galerie
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className='bg-silver h-[1px] my-5'></div>

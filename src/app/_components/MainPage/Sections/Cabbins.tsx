@@ -42,6 +42,7 @@ const Cabbins = () => {
                         key={i}
                         img='Kabinka 1'
                         title={cabbin.title}
+                        tag={cabbin.tag}
                         price={cabbin.price1}
                     ></CabinCard>
                 ))}

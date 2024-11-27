@@ -37,7 +37,7 @@ const Hero = () => {
                         profesionální péči a špičkové solární technologie.
                         Získejte dokonalé opálení přímo v srdci města!
                     </p>
-                    <div className='mt-4 flex flex-col sm:flex-row items-center gap-4'>
+                    <div className='mt-4 flex flex-wrap items-center gap-4'>
                         <Button
                             variant={'1lg'}
                             text='Navštívte nás'
