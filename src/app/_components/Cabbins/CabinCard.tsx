@@ -5,7 +5,15 @@ import image from '@/../public/images/img1.jpg'
 import Button from '../Global/Button'
 import Tag from '../ui/Tag'
 
-const CabinCard = ({ img, title }: { img?: string; title: string }) => {
+const CabinCard = ({
+    img,
+    title,
+    price,
+}: {
+    img?: string
+    title: string
+    price: number
+}) => {
     return (
         <div className='w-full relative flex items-end p-4 text-white group/cabbinCard  aspect-[7/8]'>
             <figure className='bg-black absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden '>
@@ -28,12 +36,12 @@ const CabinCard = ({ img, title }: { img?: string; title: string }) => {
                 <div className='flex  justify-between items-end'>
                     <div>
                         <p>Cena</p>
-                        <p className='font-bold text-lg'> 18 Kč/min. </p>
+                        <p className='font-bold text-lg'> {price} Kč/min. </p>
                     </div>
                     <Button
                         text='Zjistit více'
                         link='xd'
-                        variant={1}
+                        variant={'1sm'}
                         className='self-end'
                         id={title.replaceAll(' ', '-') + 'btn'}
                     ></Button>

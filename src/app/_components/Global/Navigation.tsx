@@ -17,10 +17,13 @@ const links = [
         text: 'O nás',
         link: '/#o-nas',
     },
-
     {
-        text: 'Solária',
-        link: '/#solaria',
+        text: 'Kabinky',
+        link: '/#kabinky',
+    },
+    {
+        text: 'Galerie',
+        link: '/#galerie',
     },
 ]
 
@@ -77,7 +80,7 @@ const Navigation = () => {
 
     return (
         <div className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
-            <div className='navBar w-full px-4 py-2 bg-white/60 hover:bg-white/80 duration-200 border-b rounded-2xl border-black/20 shadow-md backdrop-blur-md overflow-hidden'>
+            <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 shadow-md overflow-hidden'>
                 <nav className='w-full flex justify-between items-center gap-2 py-2'>
                     <Link href={'/#uvod'}>
                         <Image
@@ -90,7 +93,7 @@ const Navigation = () => {
                     </Link>
 
                     <div className='sm:flex hidden gap-2 md:gap-10  items-center'>
-                        <ul className='gap-4 flex items-end'>
+                        <ul className='gap-4 flex items-center'>
                             {links.map((link, i) => (
                                 <li
                                     key={i}
@@ -107,9 +110,9 @@ const Navigation = () => {
                         </ul>
 
                         <Button
-                            text='Navštivte nás'
+                            text='Kontakt'
                             link='/#kontakt'
-                            variant={1}
+                            variant={'1sm'}
                             id='navigation'
                         ></Button>
                     </div>
@@ -144,7 +147,10 @@ const Navigation = () => {
                             </Link>
                         </li>
                     ))}
-                    <li className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'>
+                    <li
+                        className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'
+                        onClick={() => openMobileMenu()}
+                    >
                         <Link
                             className='text-black hover:text-orange duration-200'
                             href={'/#kontakt'}

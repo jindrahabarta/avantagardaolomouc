@@ -25,7 +25,7 @@ const FindUs = () => {
                         </li>
                         <li className='mt-2'>
                             <Link
-                                href={'mailto:'}
+                                href={'mailto:solbank@seznam.cz'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
                                 <EmailIcon className='w-6 h-fit fill-orange' />

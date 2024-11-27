@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import Link from 'next/link'
 
 interface props {
-    variant: number
+    variant: string
     text: string
     link: string
     className?: string
@@ -41,7 +41,7 @@ const Button = ({ text, variant, link, className, id }: props) => {
         })
     }
 
-    if (variant === 1)
+    if (variant === '1sm')
         return (
             <Link href={link}>
                 <button
@@ -49,13 +49,55 @@ const Button = ({ text, variant, link, className, id }: props) => {
                     onMouseLeave={v1NotHover}
                     type='button'
                     aria-label={text + link}
-                    className={`border-2 border-orange hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button ${className}`}
+                    className={`${className} py-2 px-6 text-xl border-2 border-orange hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button`}
                 >
                     <figure
                         id={`buttonBg-${id}`}
                         className='absolute aspect-square rounded-full bg-white/90 -translate-x-1/2 -translate-y-1/2'
                     ></figure>
-                    <div className='py-2 px-6 text-xl font-semibold  text-white group-hover/button:text-black duration-200 text-nowrap relative'>
+                    <div className='font-semibold text-white group-hover/button:text-black duration-200 text-nowrap relative'>
+                        {text}
+                    </div>
+                </button>
+            </Link>
+        )
+
+    if (variant === '1lg')
+        return (
+            <Link href={link}>
+                <button
+                    onMouseEnter={v1Hover}
+                    onMouseLeave={v1NotHover}
+                    type='button'
+                    aria-label={text + link}
+                    className={`${className} py-3 px-8 text-xl border-2 border-orange hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button`}
+                >
+                    <figure
+                        id={`buttonBg-${id}`}
+                        className='absolute aspect-square rounded-full bg-white/90 -translate-x-1/2 -translate-y-1/2'
+                    ></figure>
+                    <div className='font-semibold text-white group-hover/button:text-black duration-200 text-nowrap relative'>
+                        {text}
+                    </div>
+                </button>
+            </Link>
+        )
+
+    if (variant === '2lg')
+        return (
+            <Link href={link}>
+                <button
+                    onMouseEnter={v1Hover}
+                    onMouseLeave={v1NotHover}
+                    type='button'
+                    aria-label={text + link}
+                    className={`${className} py-3 px-8 text-xl border-2 border-white hover:border-black duration-200 bg-white/20 rounded-2xl shadow-lg relative overflow-hidden group/button`}
+                >
+                    <figure
+                        id={`buttonBg-${id}`}
+                        className='absolute aspect-square rounded-full bg-white/90 -translate-x-1/2 -translate-y-1/2'
+                    ></figure>
+                    <div className='font-semibold text-white group-hover/button:text-black duration-200 text-nowrap relative'>
                         {text}
                     </div>
                 </button>
