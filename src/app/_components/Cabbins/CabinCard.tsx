@@ -11,7 +11,7 @@ const CabinCard = ({ img, title }: { img?: string; title: string }) => {
             <figure className='bg-black absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden '>
                 <Image
                     src={image}
-                    alt={title}
+                    alt={title + img}
                     width={350}
                     height={400}
                     className='object-cover w-full h-full opacity-75 group-hover/cabbinCard:opacity-60 group-hover/cabbinCard:scale-105 duration-200'
