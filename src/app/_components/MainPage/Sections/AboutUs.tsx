@@ -5,11 +5,10 @@ import img1 from '@/../public/images/img1.jpg'
 const AboutUs = () => {
     return (
         <section id='o-nas' className='pt-24'>
-            <div className='flex gap-20'>
+            <div className='flex flex-col lg:flex-row gap-10 lg:gap-20'>
                 <div className='flex-[2]'>
                     <h1>O nás</h1>
                     <p>
-                        {' '}
                         Čtyři základní živly, na kterých závisí náš život jsou
                         voda, vzduch, půda a sluneční záření. Kdybychom jeden z
                         těchto živlů neměli, přestali bychom jako lidstvo

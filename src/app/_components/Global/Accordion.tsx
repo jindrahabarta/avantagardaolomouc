@@ -11,7 +11,7 @@ const Accordion = ({ title, answer }: { title: string; answer: string }) => {
                 className='flex justify-between w-full border-b border-black/40 pb-2'
             >
                 <span>
-                    <p className='font-semibold'>{title}</p>
+                    <p className='font-semibold text-left'>{title}</p>
                 </span>
 
                 <svg

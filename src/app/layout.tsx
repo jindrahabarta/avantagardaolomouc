@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='cs'>
-            <body className={`antialiased flex flex-col items-center`}>
+            <body className='antialiased flex flex-col items-center overflow-x-hidden'>
                 <Navigation></Navigation>
 
                 <main className='max-w-[1392px] w-full px-5'>{children}</main>

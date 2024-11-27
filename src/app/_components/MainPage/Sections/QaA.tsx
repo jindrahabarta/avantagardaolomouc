@@ -6,7 +6,7 @@ const QaA = () => {
     return (
         <section className='py-10 flex flex-col items-center'>
             <h1>Otázky a odpovědi</h1>
-            <div className='p-4 shadow-md border border-black rounded-2xl w-[800px] mt-4'>
+            <div className='p-4 shadow-md border border-black rounded-2xl w-full lg:w-[800px] mt-4'>
                 <Accordion
                     title='Jak dlouho bych měl/a poprvé zůstat v soláriu?'
                     answer='Při první návštěvě doporučujeme kratší dobu, obvykle 5–8 minut, v závislosti na typu vaší pokožky. Naši odborníci vám rádi poradí.'

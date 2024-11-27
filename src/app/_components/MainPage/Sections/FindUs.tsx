@@ -12,21 +12,21 @@ const FindUs = () => {
                     <h2>Kontaktní informace</h2>
                     <Link
                         href={''}
-                        className='flex items-center gap-2 w-fit text-black duration-200'
+                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                     >
                         <MapPinIcon className='w-6 h-fit fill-orange ' />
                         <span>Sokolská 22 770 01 Olomouc</span>
                     </Link>
                     <Link
                         href={'mailto:'}
-                        className='flex items-center gap-2 w-fit text-black duration-200'
+                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                     >
                         <EmailIcon className='w-6 h-fit fill-orange' />
                         <span>solbank@seznam.cz</span>
                     </Link>
                     <Link
                         href={''}
-                        className='flex items-center gap-2 w-fit text-black duration-200'
+                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                     >
                         <PhoneIcon className='w-6 h-fit fill-orange' />
                         <span>+420 737 331 132</span>

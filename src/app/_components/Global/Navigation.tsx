@@ -134,6 +134,7 @@ const Navigation = () => {
                         <li
                             key={i}
                             className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'
+                            onClick={() => openMobileMenu()}
                         >
                             <Link
                                 className='text-black hover:text-orange duration-200'
