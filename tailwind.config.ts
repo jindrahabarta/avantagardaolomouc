@@ -10,8 +10,14 @@ export default {
         extend: {
             colors: {
                 orange: '#fe6601',
+                darkOrange: '#db5800',
                 silver: '#bcbcbc',
                 darkSilver: '#7a7979',
+            },
+            flex: {
+                '2': '2 2 0%',
+                '3': '3 3 0%',
+                '4': '4 4 0%',
             },
         },
     },
