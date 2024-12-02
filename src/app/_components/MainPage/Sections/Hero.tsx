@@ -14,16 +14,18 @@ const Hero = () => {
     return (
         <section id='uvod' className='h-screen w-full pb-0 py-5 '>
             <figure className='absolute left-0 top-0 w-full h-screen select-none bg-black overflow-hidden'>
+                <div className='absolute left-0 top-0 w-full h-full bg-black/40 z-10'></div>
                 <Image
-                    className='w-full h-full object-cover opacity-60'
+                    className='w-full h-full object-cover '
                     id='hero-image'
                     src={HeroImage}
                     alt='Pozadí úvodní sekce'
                     width={1000}
                     height={1000}
+                    priority
                 ></Image>
             </figure>
-            <div className='w-full h-full relative pt-20 sm:pt-36 flex gap-20'>
+            <div className='w-full h-full relative pt-20 sm:pt-36 flex gap-20 z-20'>
                 <div className='flex-[3]'>
                     <h1 className='text-white  max-w-[12em] text-4xl sm:text-5xl md:text-7xl'>
                         Solárium Avantagarda

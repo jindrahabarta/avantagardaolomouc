@@ -17,22 +17,24 @@ const CabinCard = ({
     price: number
 }) => {
     return (
-        <div className='w-full relative flex items-end p-4 text-white group/cabbinCard  aspect-[7/8]'>
-            <figure className='bg-black absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden '>
+        <div className='w-full relative flex items-end p-4 text-white group/cabbinCard  aspect-[7/8] select-none'>
+            <figure className=' absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden'>
+                <div className='bg-black/30 z-10 group-hover/cabbinCard:bg-black/40 absolute top-0 left-0 w-full h-full duration-200'></div>
+
                 <Image
                     src={image}
                     alt={title + img}
                     width={350}
                     height={400}
-                    className='object-cover w-full h-full opacity-75 group-hover/cabbinCard:opacity-60 group-hover/cabbinCard:scale-105 duration-200'
+                    className='object-cover w-full h-full group-hover/cabbinCard:scale-105 duration-200'
                 ></Image>
             </figure>
             <Tag
-                className='absolute top-4 left-4 bg-white group-hover/cabbinCard:bg-orange group-hover/cabbinCard:text-white'
+                className='absolute z-20 top-4 left-4 bg-white group-hover/cabbinCard:bg-orange group-hover/cabbinCard:text-white'
                 text={tag}
             ></Tag>
 
-            <div className='relative w-full'>
+            <div className='relative w-full z-20'>
                 <h2 className='text-xl pb-2 duration-200'>{title}</h2>
 
                 <div className='flex  justify-between items-end'>
