@@ -10,6 +10,7 @@ import img4 from '@/../public/images/galerie/007.jpg'
 import img5 from '@/../public/images/galerie/008.jpg'
 import img6 from '@/../public/images/galerie/010.jpg'
 import img7 from '@/../public/images/galerie/019.jpg'
+import Tag from '../ui/Tag'
 
 const images = [
     {
@@ -56,29 +57,79 @@ const ImageGallery = () => {
     }
 
     return (
-        <div className='grid grid-cols-2 md:grid-cols-5 gap-4 mt-4'>
-            {detailOpened !== undefined && (
-                <ImageDetail
-                    handleClose={closeImage}
-                    images={images}
-                    index={detailOpened}
-                ></ImageDetail>
-            )}
-            {images.map((img, i) => (
-                <div
-                    key={i}
-                    className='w-full aspect-square rounded-2xl overflow-hidden cursor-pointer'
-                    onClick={() => openImage(i)}
-                >
-                    <Image
-                        src={img.img}
-                        width={250}
-                        height={250}
-                        alt={i.toString()}
-                        className='w-full h-full object-cover hover:scale-105 duration-200 transition-all'
-                    ></Image>
-                </div>
-            ))}
+        // <div className='grid grid-cols-2 md:grid-cols-5 gap-4 mt-4'>
+        //     {detailOpened !== undefined && (
+        //         <ImageDetail
+        //             handleClose={closeImage}
+        //             images={images}
+        //             index={detailOpened}
+        //         ></ImageDetail>
+        //     )}
+
+        //     {images.map((img, i) => (
+        //         <div
+        //             key={i}
+        //             className='w-full aspect-square rounded-2xl overflow-hidden cursor-pointer'
+        //             onClick={() => openImage(i)}
+        //         >
+        //             <Image
+        //                 src={img.img}
+        //                 width={250}
+        //                 height={250}
+        //                 alt={i.toString()}
+        //                 className='w-full h-full object-cover hover:scale-105 duration-200 transition-all'
+        //             ></Image>
+        //         </div>
+        //     ))}
+        // </div>
+        <div className='grid grid-cols-2 md:grid-cols-12 grid-rows-12 gap-4 mt-4'>
+            <div className='bg-black rounded-2xl row-span-2 col-span-3 overflow-hidden relative group/galleryImage'>
+                <Image
+                    src={img3}
+                    alt='image'
+                    className='w-full h-full object-cover hover:scale-105 duration-200 group-hover/galleryImage:opacity-90 select-none'
+                ></Image>
+                <Tag
+                    className='absolute top-4 left-4 bg-white group-hover/galleryImage:bg-orange group-hover/galleryImage:text-white pointer-events-none'
+                    text={'Předsíň'}
+                ></Tag>
+            </div>
+            <div className='bg-black rounded-2xl row-span-2 col-span-5 overflow-hidden relative group/galleryImage'>
+                <Image
+                    src={img1}
+                    alt='image'
+                    className='w-full h-full object-cover hover:scale-105 duration-200 group-hover/galleryImage:opacity-90 select-none'
+                ></Image>
+                <Tag
+                    className='absolute top-4 left-4 bg-white group-hover/galleryImage:bg-orange group-hover/galleryImage:text-white pointer-events-none'
+                    text={'Zahrádka'}
+                ></Tag>
+            </div>
+            <div className='bg-red-400 rounded-2xl row-span-2 col-span-4 overflow-hidden'>
+                <Image
+                    src={img2}
+                    alt='image'
+                    className='w-full h-full object-cover '
+                ></Image>
+            </div>
+            <div className='bg-red-400 rounded-2xl row-span-2 col-span-4'></div>
+            <div className='bg-red-400 rounded-2xl row-span-2 col-span-3'></div>
+            <div className='bg-red-400 rounded-2xl row-span-2 col-span-5'></div>
+
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2 aspect-square'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-2 col-span-3'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
+            <div className='bg-red-400 rounded-2xl row-span-1 col-span-2'></div>
         </div>
     )
 }

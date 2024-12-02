@@ -60,6 +60,7 @@ const FindUs = () => {
 
                     <div className=' h-fit rounded-2xl overflow-hidden shadow-lg mt-2'>
                         <iframe
+                            title='Mapa Solárium Avantagarda Olomouc'
                             width='100%'
                             height='300'
                             src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sokolsk%C3%A1%20536/22,%20779%2000%20Olomouc%209+(Sol%C3%A1rn%C3%AD%20studio%20avantgarda%20olomouc%20-%20mapa)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'

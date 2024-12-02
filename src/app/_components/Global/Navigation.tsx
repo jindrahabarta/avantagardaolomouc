@@ -23,7 +23,7 @@ const links = [
     },
     {
         text: 'Galerie',
-        link: '/#galerie',
+        link: '/galerie',
     },
 ]
 
@@ -79,7 +79,7 @@ const Navigation = () => {
     }
 
     return (
-        <div className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
+        <header className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
             <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 shadow-md overflow-hidden'>
                 <nav className='w-full flex justify-between items-center gap-2 py-2'>
                     <Link href={'/#uvod'}>
@@ -160,7 +160,7 @@ const Navigation = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </header>
     )
 }
 

@@ -40,6 +40,10 @@ const CabinCard = ({
                         <p>Cena</p>
                         <p className='font-bold text-lg'> {price} Kč/min. </p>
                     </div>
+                    {/* <div className='text-right'>
+                        <p>S permanentkou</p>
+                        <p className='font-bold text-lg'> {price} Kč/min. </p>
+                    </div> */}
                     <Button
                         text='Zjistit více'
                         link='xd'
