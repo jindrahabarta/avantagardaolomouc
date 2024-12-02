@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
-import EmailIcon from '../../icons/EmailIcon'
-import MapPinIcon from '../../icons/MapPinIcon'
-import PhoneIcon from '../../icons/PhoneIcon'
+// import EmailIcon from '../../icons/EmailIcon'
+// import MapPinIcon from '../../icons/MapPinIcon'
+// import PhoneIcon from '../../icons/PhoneIcon'
 
 const FindUs = () => {
     return (
@@ -14,10 +14,10 @@ const FindUs = () => {
                     <ul>
                         <li className='mt-2'>
                             <Link
-                                href={''}
+                                href={'/#'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
-                                <MapPinIcon className='w-6 h-fit fill-orange ' />
+                                {/* <MapPinIcon className='w-6 h-fit fill-orange ' /> */}
                                 <span className='h-fit'>
                                     Sokolská 22 770 01 Olomouc
                                 </span>
@@ -28,7 +28,7 @@ const FindUs = () => {
                                 href={'mailto:solbank@seznam.cz'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
-                                <EmailIcon className='w-6 h-fit fill-orange' />
+                                {/* <EmailIcon className='w-6 h-fit fill-orange' /> */}
                                 <span>solbank@seznam.cz</span>
                             </Link>
                         </li>
@@ -37,7 +37,7 @@ const FindUs = () => {
                                 href={''}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
-                                <PhoneIcon className='w-6 h-fit fill-orange' />
+                                {/* <PhoneIcon className='w-6 h-fit fill-orange' /> */}
                                 <span>+420 737 331 132</span>
                             </Link>
                         </li>
