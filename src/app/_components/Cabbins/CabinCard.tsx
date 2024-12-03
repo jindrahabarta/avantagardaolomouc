@@ -7,17 +7,23 @@ import ButtonWithoutLink from '../Global/Button copy'
 import CrossIcon from '../icons/CrossIcon'
 import gsap from 'gsap'
 import Button from '../Global/Button'
+import Link from 'next/link'
+import PhoneIcon from '../icons/PhoneIcon'
+import EmailIcon from '../icons/EmailIcon'
+import MapPinIcon from '../icons/MapPinIcon'
 
 const CabinCard = ({
     img,
     title,
     tag,
-    price,
+    price1,
+    price2,
 }: {
     img?: string
     title: string
     tag: string
-    price: number
+    price1: number
+    price2: number
 }) => {
     const [showDetail, setShowDetail] = useState(false)
 
@@ -37,9 +43,9 @@ const CabinCard = ({
                 <CabbinDetail
                     handleClose={() => setShowDetail(false)}
                     title={title}
-                    text={title}
                     img={image}
-                    price={price}
+                    price1={price1}
+                    price2={price2}
                 ></CabbinDetail>
             )}
             <figure className=' absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden'>
@@ -64,7 +70,7 @@ const CabinCard = ({
                 <div className='flex  justify-between items-end'>
                     <div>
                         <p>Cena</p>
-                        <p className='font-bold text-lg'> {price} Kč/min. </p>
+                        <p className='font-bold text-lg'> {price1} Kč/min. </p>
                     </div>
                     {/* <div className='text-right'>
                         <p>S permanentkou</p>
@@ -86,16 +92,18 @@ export default CabinCard
 
 const CabbinDetail = ({
     handleClose,
-    img,
+
     title,
-    text,
-    price,
+
+    price1,
+    price2,
 }: {
     handleClose: () => void
     img: StaticImageData
     title: string
-    text: string
-    price: number
+
+    price1: number
+    price2: number
 }) => {
     useEffect(() => {
         const openTl = gsap.timeline({ defaults: { duration: 0.2 } })
@@ -110,25 +118,93 @@ const CabbinDetail = ({
     }, [])
 
     return (
-        <aside className='cardDetailMain opacity-0 bg-black/50 top-0 left-0 w-full h-full fixed z-40 flex justify-center items-end px-4'>
-            <div className='cardDetailWrapper translate-y-full text-black bg-white w-full sm:w-4/5 lg:w-2/3 h-[80vh] rounded-t-2xl p-4 relative'>
-                <span
-                    onClick={handleClose}
-                    className='absolute top-4 right-4 bg-orange rounded-xl p-1 shadow-md hover:shadow-none duration-200'
-                >
-                    <CrossIcon className='w-10 stroke-white'></CrossIcon>
-                </span>
-                <h2>{title}</h2>
-                <p>{text}</p>
-                <p>{price} Kč/min</p>
-                <Image src={img} alt='Obrázek kabinky'></Image>
-                <div>
-                    <Button
-                        variant='1sm'
-                        text='Objednat se'
-                        link='tel:333333333'
-                        id='order'
-                    ></Button>
+        <aside className='cardDetailMain opacity-0 bg-black/50 backdrop-blur-sm top-0 left-0 w-full h-full fixed z-40 flex justify-center items-end px-4'>
+            <div className='cardDetailWrapper translate-y-full text-black bg-white w-full sm:w-4/5 lg:w-2/3 h-[80vh] rounded-t-2xl p-8 overflow-y-auto relative'>
+                <div className='flex justify-between gap-2'>
+                    <h2>Kabinka - {title}</h2>
+
+                    <span
+                        onClick={handleClose}
+                        className=' bg-orange hover:bg-darkOrange rounded-xl p-1 h-fit shadow-md hover:shadow-none duration-200'
+                    >
+                        <CrossIcon className='w-10 stroke-white'></CrossIcon>
+                    </span>
+                </div>
+                {/* <p>{text}</p> */}
+
+                <h3 className='mt-4'>Ceník</h3>
+                <p>
+                    Běžná cena:{' '}
+                    <span className='font-semibold'>{price1} Kč/min</span>
+                </p>
+                <p>
+                    S permanentkou:{' '}
+                    <span className='font-semibold'>{price2} Kč/min</span>
+                </p>
+
+                <h3 className='mt-4'>Otevírací doba</h3>
+
+                <p className='mt-2'>
+                    <span className='font-semibold'>Po - Pá:</span> 9:00 - 20:00
+                </p>
+                <p className='mt-2'>
+                    <span className='font-semibold'>So:</span> 9:00 - 20:00
+                </p>
+                <p className='mt-2'>
+                    <span className='font-semibold'>Ne:</span> ZAVŘENO
+                </p>
+                <h3 className='mt-4'>Kontakt</h3>
+
+                <ul>
+                    <li className='mt-2'>
+                        <Link
+                            href={
+                                'https://www.google.com/maps/place/Sol%C3%A1rium+Avantgarda/@49.5962322,17.2470124,17z/data=!3m1!4b1!4m6!3m5!1s0x47124ef389ff5265:0x2e1bd6b9aa9f262a!8m2!3d49.5962288!4d17.2495873!16s%2Fg%2F1tlkb32f?hl=cs-CZ&entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
+                            }
+                            target='_blank'
+                            className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                        >
+                            <MapPinIcon className='w-6 h-auto fill-orange ' />
+                            <span className='h-fit'>
+                                Sokolská 22 770 01 Olomouc
+                            </span>
+                        </Link>
+                    </li>
+                    <li className='mt-2'>
+                        <Link
+                            href={'mailto:info@solariumolomouc.cz'}
+                            className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                        >
+                            <EmailIcon className='w-6 h-auto fill-orange' />
+                            <span>info@solariumolomouc.cz</span>
+                        </Link>
+                    </li>
+                    <li className='mt-2'>
+                        <Link
+                            href={'tel:737331132'}
+                            className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                        >
+                            <PhoneIcon className='w-6 h-auto fill-orange' />
+                            <span>+420 737 331 132</span>
+                        </Link>
+                    </li>
+                </ul>
+
+                <Button
+                    variant='1sm'
+                    text='Objednat se'
+                    link='tel:333333333'
+                    id='order'
+                    className='mt-4'
+                ></Button>
+
+                <div className=' h-fit rounded-2xl overflow-hidden shadow-lg mt-2'>
+                    <iframe
+                        title='Mapa Solárium Avantagarda Olomouc'
+                        width='100%'
+                        height='300'
+                        src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sokolsk%C3%A1%20536/22,%20779%2000%20Olomouc%209+(Sol%C3%A1rn%C3%AD%20studio%20avantgarda%20olomouc%20-%20mapa)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
+                    ></iframe>
                 </div>
             </div>
         </aside>

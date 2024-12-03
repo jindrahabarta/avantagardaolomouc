@@ -43,7 +43,8 @@ const Cabbins = () => {
                         img='Kabinka 1'
                         title={cabbin.title}
                         tag={cabbin.tag}
-                        price={cabbin.price1}
+                        price1={cabbin.price1}
+                        price2={cabbin.price2}
                     ></CabinCard>
                 ))}
             </div>

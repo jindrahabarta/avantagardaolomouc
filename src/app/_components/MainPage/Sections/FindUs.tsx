@@ -14,7 +14,10 @@ const FindUs = () => {
                     <ul>
                         <li className='mt-2'>
                             <Link
-                                href={'/#'}
+                                href={
+                                    'https://www.google.com/maps/place/Sol%C3%A1rium+Avantgarda/@49.5962322,17.2470124,17z/data=!3m1!4b1!4m6!3m5!1s0x47124ef389ff5265:0x2e1bd6b9aa9f262a!8m2!3d49.5962288!4d17.2495873!16s%2Fg%2F1tlkb32f?hl=cs-CZ&entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
+                                }
+                                target='_blank'
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
                                 <MapPinIcon className='w-6 h-auto fill-orange ' />
@@ -25,16 +28,16 @@ const FindUs = () => {
                         </li>
                         <li className='mt-2'>
                             <Link
-                                href={'mailto:solbank@seznam.cz'}
+                                href={'mailto:info@solariumolomouc.cz'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
                                 <EmailIcon className='w-6 h-auto fill-orange' />
-                                <span>solbank@seznam.cz</span>
+                                <span>info@solariumolomouc.cz</span>
                             </Link>
                         </li>
                         <li className='mt-2'>
                             <Link
-                                href={''}
+                                href={'tel:737331132'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
                                 <PhoneIcon className='w-6 h-auto fill-orange' />
