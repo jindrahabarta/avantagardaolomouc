@@ -121,6 +121,7 @@ const CabbinDetail = ({
                 <h2>{title}</h2>
                 <p>{text}</p>
                 <p>{price} Kč/min</p>
+                <Image src={img} alt='Obrázek kabinky'></Image>
                 <div>
                     <Button
                         variant='1sm'

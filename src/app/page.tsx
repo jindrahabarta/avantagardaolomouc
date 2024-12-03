@@ -4,7 +4,6 @@ import FindUs from './_components/MainPage/Sections/FindUs'
 import QaA from './_components/MainPage/Sections/QaA'
 import AboutUs from './_components/MainPage/Sections/AboutUs'
 import Cabbins from './_components/MainPage/Sections/Cabbins'
-import Gallery from './_components/MainPage/Sections/Gallery'
 
 export const metadata: Metadata = {
     title: 'Solární studio | Solárium Avantgarda Olomouc',
