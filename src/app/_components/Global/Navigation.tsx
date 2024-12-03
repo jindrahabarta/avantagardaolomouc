@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import Image from 'next/image'
 
@@ -7,6 +7,7 @@ import Logo from '@/../public/images/avantgarda logo.png'
 import HamburgerIcon from '../icons/HamburgerIcon'
 import Link from 'next/link'
 import gsap from 'gsap'
+import animationInit from '@/app/assets/animationInit'
 
 const links = [
     {
@@ -30,6 +31,10 @@ const links = [
 const Navigation = () => {
     const [isOpened, setIsOpened] = useState(false)
     const [isPressed, setIsPressed] = useState(false)
+
+    useEffect(() => {
+        animationInit()
+    }, [])
 
     const openMobileMenu = () => {
         setIsOpened((prev) => !prev)

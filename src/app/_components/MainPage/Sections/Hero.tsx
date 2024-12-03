@@ -1,16 +1,9 @@
 'use client'
-import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Button from '../../Global/Button'
-
 import HeroImage from '@/../public/images/HeroImage3.jpg'
-import animationInit from '@/app/assets/animationInit'
 
 const Hero = () => {
-    useEffect(() => {
-        animationInit()
-    }, [])
-
     return (
         <section id='uvod' className='h-screen w-full pb-0 py-5 '>
             <figure className='absolute left-0 top-0 w-full h-screen select-none bg-black overflow-hidden'>

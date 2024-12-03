@@ -6,7 +6,7 @@ import PhoneIcon from '../../icons/PhoneIcon'
 
 const FindUs = () => {
     return (
-        <section id='kontakt' className='pt-24'>
+        <section id='kontakt' className='pt-24 pb-24'>
             <div className='flex flex-col sm:flex-row'>
                 <div className='flex-3 text-xl'>
                     <h2>Kontaktní informace</h2>
