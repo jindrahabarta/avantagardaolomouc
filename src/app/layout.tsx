@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     },
     description:
         'Navštivte Solárium Avantgarda v centru Olomouce a dopřejte si profesionální opalování v moderním prostředí. Užijte si chvíle pro sebe plné relaxu!',
+
+    authors: {
+        name: 'Jindrich Habarta',
+        url: 'https://jindrahabarta.netlify.app/',
+    },
 }
 
 export default function RootLayout({

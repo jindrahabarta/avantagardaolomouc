@@ -1,5 +1,12 @@
 import React from 'react'
-import ImageGallery from '../_components/Gallery/ImageGallery'
+import ImageGallery from './_Sections/ImageGallery'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Galerie',
+    description:
+        'Navštivte Solárium Avantgarda v centru Olomouce a dopřejte si profesionální opalování v moderním prostředí. Užijte si chvíle pro sebe plné relaxu!',
+}
 
 const Gallery = () => {
     return (

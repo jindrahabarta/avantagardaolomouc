@@ -10,7 +10,7 @@ import img3 from '@/../public/images/galerie/006.jpg'
 // import img5 from '@/../public/images/galerie/008.jpg'
 // import img6 from '@/../public/images/galerie/010.jpg'
 // import img7 from '@/../public/images/galerie/019.jpg'
-import Tag from '../ui/Tag'
+import Tag from '../../_components/ui/Tag'
 
 // const images = [
 //     {

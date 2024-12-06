@@ -8,6 +8,7 @@ import HamburgerIcon from '../icons/HamburgerIcon'
 import Link from 'next/link'
 import gsap from 'gsap'
 import animationInit from '@/app/assets/animationInit'
+import { usePathname } from 'next/navigation'
 
 const links = [
     {
@@ -26,15 +27,20 @@ const links = [
         text: 'Galerie',
         link: '/galerie',
     },
+    {
+        text: 'Opalování',
+        link: '/opalovani',
+    },
 ]
 
 const Navigation = () => {
     const [isOpened, setIsOpened] = useState(false)
     const [isPressed, setIsPressed] = useState(false)
+    const path = usePathname()
 
     useEffect(() => {
-        animationInit()
-    }, [])
+        animationInit(path)
+    }, [path])
 
     const openMobileMenu = () => {
         setIsOpened((prev) => !prev)

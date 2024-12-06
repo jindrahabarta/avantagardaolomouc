@@ -22,8 +22,7 @@ const AboutUs = () => {
                         dopadu-geografické poloze, ročním období a denní době.
                         UV paprsky jsou neviditelné. O prázdninách jsou lidé
                         často vystaveni různé intenzitě slunečního záření, často
-                        bez znalosti jeho aktuální sily. Více zde:
-                        https://studio-avantgarda.webnode.cz/opalovani/
+                        bez znalosti jeho aktuální sily.
                     </p>
                 </div>
                 <div className='flex-1'>

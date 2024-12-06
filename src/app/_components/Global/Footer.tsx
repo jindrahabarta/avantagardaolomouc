@@ -119,6 +119,14 @@ const Footer = () => {
                                     Galerie
                                 </Link>
                             </li>
+                            <li className='mt-2'>
+                                <Link
+                                    href={'/opalovani'}
+                                    className='font-semibold'
+                                >
+                                    Opalování
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
