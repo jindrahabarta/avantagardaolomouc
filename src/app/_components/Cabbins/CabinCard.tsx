@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import image from '@/../public/images/img1.jpg'
 import Tag from '../ui/Tag'
-import ButtonWithoutLink from '../Global/Button copy'
+import ButtonWithoutLink from '../Global/ButtonWithoutLink'
 import CrossIcon from '../icons/CrossIcon'
 import gsap from 'gsap'
 import Button from '../Global/Button'
@@ -196,7 +196,7 @@ const CabbinDetail = ({
                     <Button
                         variant='1sm'
                         text='Objednat se'
-                        link='tel:333333333'
+                        link='tel:737331132'
                         id='order'
                         className='mt-4'
                     ></Button>

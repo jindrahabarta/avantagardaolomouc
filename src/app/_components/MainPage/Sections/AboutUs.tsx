@@ -7,22 +7,19 @@ const AboutUs = () => {
         <section id='o-nas' className='pt-24'>
             <div className='flex flex-col lg:flex-row gap-10 lg:gap-20'>
                 <div className='flex-[2]'>
-                    <h1>O nás</h1>
+                    <h1>O Soláriu</h1>
                     <p>
-                        Čtyři základní živly, na kterých závisí náš život jsou
-                        voda, vzduch, půda a sluneční záření. Kdybychom jeden z
-                        těchto živlů neměli, přestali bychom jako lidstvo
-                        existovat. Bez slunce není život! Sluneční světlo:
-                        ultrafialové záření( UVC, UVb, UVA) je vyzařováno
-                        sluncem a UV-trubicemi. UVC záření, které je pro lidi
-                        nebezpečné, je ozónovou vrstvou v horní části atmosféry
-                        a v UV trubicích, zcela odfiltrované. Část UVB záření
-                        (může způsobit spálení kůže a poškození očí) UVA záření
-                        dopadá na zemský povrch. Jeho síla závisí na úhlu
-                        dopadu-geografické poloze, ročním období a denní době.
-                        UV paprsky jsou neviditelné. O prázdninách jsou lidé
-                        často vystaveni různé intenzitě slunečního záření, často
-                        bez znalosti jeho aktuální sily.
+                        Vítejte v našem soláriu Avantgarda v centru Olomouce!
+                        Pokud hledáte ideální místo pro bezpečné a kvalitní
+                        opalování v Olomouci, jste na správném místě. Naše
+                        moderní solárium nabízí špičkové služby přímo v srdci
+                        Olomouce, kde si můžete dopřát dokonalou péči o svou
+                        pokožku a získat přirozeně opálený vzhled po celý rok.
+                        Navštivte nás v centru Olomouce a objevte výhody
+                        pravidelného opalování s nejmodernějšími technologiemi,
+                        které zaručují efektivní a šetrné opalování. Solárium
+                        Avantarda Olomouc je tu pro vás, abyste si mohli užít
+                        chvíle relaxace a krásný vzhled každý den!
                     </p>
                 </div>
                 <div className='flex-1'>

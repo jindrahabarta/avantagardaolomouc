@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 const Opalovani = () => {
     return (
-        <section className='pt-32'>
+        <div className='pt-32 lg:pt-0'>
             <OpalovaniUvod></OpalovaniUvod>
             <JakFunguje></JakFunguje>
             <TypyPleti></TypyPleti>
-        </section>
+        </div>
     )
 }
 

@@ -27,3 +27,7 @@ h4 {
 a {
     @apply text-orange hover:text-darkOrange duration-200;
 }
+
+p {
+    @apply text-base md:text-lg;
+}

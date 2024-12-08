@@ -4,9 +4,9 @@ import img1 from '@/../public/images/img1.jpg'
 
 const JakFunguje = () => {
     return (
-        <section className='pt-24'>
-            <div className='flex flex-col lg:flex-row-reverse gap-10 lg:gap-20'>
-                <div className='flex-[2]'>
+        <section className='lg:h-screen mt-10 md:mt-24 lg:mt-0 flex items-center'>
+            <div className='flex flex-col lg:flex-row-reverse lg:items-center gap-10 lg:gap-20'>
+                <div className='flex-[3]'>
                     <h1>Jak funguje?</h1>
                     <p>
                         Trubice v soláriu stimulují slunce a vyzařují UVa a UVB
@@ -37,8 +37,8 @@ const JakFunguje = () => {
                         tito lidé s typem kůže 1 ani na slunci ani v soláriu.
                     </p>
                 </div>
-                <div className='flex-1'>
-                    <div className='w-full h-full rounded-2xl overflow-hidden'>
+                <div className='flex-[2]'>
+                    <div className='w-full lg:h-[400px] rounded-2xl overflow-hidden'>
                         <Image
                             src={img1}
                             alt='Obrázek v sekci o nás'

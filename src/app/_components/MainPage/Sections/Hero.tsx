@@ -6,7 +6,7 @@ import HeroImage from '@/../public/images/HeroImage3.jpg'
 const Hero = () => {
     return (
         <section id='uvod' className='h-screen w-full pb-0 py-5 '>
-            <figure className='absolute left-0 top-0 w-full h-screen select-none bg-black overflow-hidden'>
+            <figure className='absolute left-0 top-0 w-full h-screen select-none overflow-hidden'>
                 <div className='absolute left-0 top-0 w-full h-full bg-black/40 z-10'></div>
                 <Image
                     className='w-full h-full object-cover '

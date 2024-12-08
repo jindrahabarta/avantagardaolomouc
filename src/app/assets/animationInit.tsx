@@ -20,6 +20,28 @@ const animationInit = (path: string) => {
                 })
             },
         })
+    } else if (path === '/opalovani') {
+        gsap.set('.opalovaniInner', {
+            y: 200,
+        })
+
+        gsap.to('.opalovaniInner', {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.2,
+        })
+    } else if (path === '/galerie') {
+        gsap.set('#galerie', {
+            y: 200,
+        })
+
+        gsap.to('#galerie', {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.2,
+        })
     }
 }
 

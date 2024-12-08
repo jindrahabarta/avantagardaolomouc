@@ -16,7 +16,7 @@ const links = [
         link: '/#uvod',
     },
     {
-        text: 'O nás',
+        text: 'O soláriu',
         link: '/#o-nas',
     },
     {
@@ -62,7 +62,7 @@ const Navigation = () => {
                     height: 65,
                 },
                 {
-                    height: 250,
+                    height: 300,
                     duration: 0.2,
                 }
             )
@@ -91,7 +91,7 @@ const Navigation = () => {
 
     return (
         <header className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
-            <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 shadow-md overflow-hidden'>
+            <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden'>
                 <nav className='w-full flex justify-between items-center gap-2 py-2'>
                     <Link href={'/#uvod'}>
                         <Image
@@ -108,7 +108,7 @@ const Navigation = () => {
                             {links.map((link, i) => (
                                 <li
                                     key={i}
-                                    className='text-lg md:text-xl text-nowrap font-semibold'
+                                    className=' text-md md:text-lg lg:text-xl text-nowrap font-semibold'
                                 >
                                     <Link
                                         className='text-black hover:text-orange duration-200'
@@ -158,6 +158,7 @@ const Navigation = () => {
                             </Link>
                         </li>
                     ))}
+
                     <li
                         className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'
                         onClick={() => openMobileMenu()}
@@ -166,7 +167,7 @@ const Navigation = () => {
                             className='text-black hover:text-orange duration-200'
                             href={'/#kontakt'}
                         >
-                            Navštivte nás
+                            Kontakt
                         </Link>
                     </li>
                 </ul>

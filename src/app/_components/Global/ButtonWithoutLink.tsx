@@ -47,13 +47,13 @@ const ButtonWithoutLink = ({ text, variant, className, id }: props) => {
                 onMouseLeave={v1NotHover}
                 type='button'
                 aria-label={text}
-                className={`${className} py-2 px-6 text-xl border-2 border-orange hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button`}
+                className={`${className} py-2 px-6 text-xl border-2 border-orange sm:hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button`}
             >
                 <figure
                     id={`buttonBg-${id}`}
-                    className='absolute aspect-square rounded-full bg-white/90 -translate-x-1/2 -translate-y-1/2'
+                    className='absolute aspect-square rounded-full bg-white/90 hidden sm:block  -translate-x-1/2 -translate-y-1/2'
                 ></figure>
-                <div className='font-semibold text-white group-hover/button:text-black duration-200 text-nowrap relative'>
+                <div className='font-semibold text-white sm:group-hover/button:text-black duration-200 text-nowrap relative'>
                     {text}
                 </div>
             </button>
@@ -66,13 +66,13 @@ const ButtonWithoutLink = ({ text, variant, className, id }: props) => {
                 onMouseLeave={v1NotHover}
                 type='button'
                 aria-label={text}
-                className={`${className} py-3 px-8 text-xl border-2 border-orange hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button`}
+                className={`${className} py-3 px-8 text-xl border-2 border-orange sm:hover:border-black duration-200 bg-orange rounded-2xl shadow-lg relative overflow-hidden group/button`}
             >
                 <figure
                     id={`buttonBg-${id}`}
-                    className='absolute aspect-square rounded-full bg-white/90 -translate-x-1/2 -translate-y-1/2'
+                    className='absolute aspect-square rounded-full bg-white/90 hidden sm:block  -translate-x-1/2 -translate-y-1/2'
                 ></figure>
-                <div className='font-semibold text-white group-hover/button:text-black duration-200 text-nowrap relative'>
+                <div className='font-semibold text-white sm:group-hover/button:text-black duration-200 text-nowrap relative'>
                     {text}
                 </div>
             </button>
@@ -85,13 +85,13 @@ const ButtonWithoutLink = ({ text, variant, className, id }: props) => {
                 onMouseLeave={v1NotHover}
                 type='button'
                 aria-label={text}
-                className={`${className} py-3 px-8 text-xl border-2 border-white hover:border-black duration-200 bg-white/20 rounded-2xl shadow-lg relative overflow-hidden group/button`}
+                className={`${className} py-3 px-8 text-xl border-2 border-white sm:hover:border-black duration-200 bg-white/20 rounded-2xl shadow-lg relative overflow-hidden group/button`}
             >
                 <figure
                     id={`buttonBg-${id}`}
-                    className='absolute aspect-square rounded-full bg-white/90 -translate-x-1/2 -translate-y-1/2'
+                    className='absolute aspect-square rounded-full bg-white/90 hidden sm:block  -translate-x-1/2 -translate-y-1/2'
                 ></figure>
-                <div className='font-semibold text-white group-hover/button:text-black duration-200 text-nowrap relative'>
+                <div className='font-semibold text-white sm:group-hover/button:text-black duration-200 text-nowrap relative'>
                     {text}
                 </div>
             </button>

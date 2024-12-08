@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Gallery = () => {
     return (
-        <section id='galerie' className='pt-32'>
+        <section id='galerie' className='pt-32 opacity-0'>
             <h1 className='text-center'>Galerie</h1>
             <ImageGallery></ImageGallery>
         </section>
