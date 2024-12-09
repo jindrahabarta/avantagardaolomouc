@@ -33,7 +33,15 @@ export const metadata: Metadata = {
         title: 'Solárium Avantgarda Olomouc - Solárium v centru Olomouce',
         description:
             'Navštivte Solárium Avantgarda v centru Olomouce a dopřejte si profesionální opalování v moderním prostředí.',
-        images: ['/_next/static/media/OpenGraphImage.978afceb.jpg'],
+
+        images: [
+            {
+                url: '/_next/static/media/OpenGraphImage.978afceb.jpg',
+                width: 1200, // Šířka obrázku
+                height: 630, // Výška obrázku
+                alt: 'Solárium Avantgarda Olomouc',
+            },
+        ],
     },
 }
 
