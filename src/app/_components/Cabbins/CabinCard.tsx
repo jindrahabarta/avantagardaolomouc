@@ -55,7 +55,7 @@ const CabinCard = ({
                 <Image
                     src={image}
                     alt={title + img}
-                    width={350}
+                    width={400}
                     height={400}
                     className='object-cover w-full h-full group-hover/cabbinCard:scale-105 duration-200'
                 ></Image>

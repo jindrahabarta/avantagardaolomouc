@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import img1 from '@/../public/images/img1.jpg'
+import AboutImage from '@/../public/images/SolariumImage.jpg'
 
 const AboutUs = () => {
     return (
@@ -23,10 +23,12 @@ const AboutUs = () => {
                     </p>
                 </div>
                 <div className='flex-1'>
-                    <div className='w-full h-full rounded-2xl overflow-hidden'>
+                    <div className='w-full h-full rounded-2xl overflow-hidden aspect-square'>
                         <Image
-                            src={img1}
+                            src={AboutImage}
                             alt='Obrázek v sekci o nás'
+                            width={600}
+                            height={500}
                             className='object-cover w-full h-full'
                         ></Image>
                     </div>

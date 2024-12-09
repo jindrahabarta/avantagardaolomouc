@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import img1 from '@/../public/images/img1.jpg'
+import SunbathingImg from '@/../public/images/Sunbathing2.jpg'
 
 const OpalovaniUvod = () => {
     return (
@@ -29,9 +29,11 @@ const OpalovaniUvod = () => {
                     </p>
                 </div>
                 <div className='opalovaniInner md:opacity-0 flex-[2]'>
-                    <div className='w-full lg:h-[400px] rounded-2xl overflow-hidden'>
+                    <div className='w-full lg:h-[400px] rounded-2xl overflow-hidden aspect-square'>
                         <Image
-                            src={img1}
+                            src={SunbathingImg}
+                            width={600}
+                            height={500}
                             alt='Obrázek v sekci o nás'
                             className='object-cover w-full h-full'
                         ></Image>

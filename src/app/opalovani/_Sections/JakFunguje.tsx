@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import img1 from '@/../public/images/img1.jpg'
+import SunbathingImg from '@/../public/images/Sunbathing.jpg'
 
 const JakFunguje = () => {
     return (
@@ -38,10 +38,12 @@ const JakFunguje = () => {
                     </p>
                 </div>
                 <div className='flex-[2]'>
-                    <div className='w-full lg:h-[400px] rounded-2xl overflow-hidden'>
+                    <div className='w-full lg:h-[400px] rounded-2xl overflow-hidden aspect-square'>
                         <Image
-                            src={img1}
+                            src={SunbathingImg}
                             alt='Obrázek v sekci o nás'
+                            width={600}
+                            height={500}
                             className='object-cover w-full h-full'
                         ></Image>
                     </div>
