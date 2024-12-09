@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from './_components/Global/Navigation'
 import Footer from './_components/Global/Footer'
-import OpenGrapImage from '@/../public/images/OpenGraphImage.jpg'
 
 export const metadata: Metadata = {
     title: {
@@ -50,8 +49,6 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    console.log(OpenGrapImage)
-
     return (
         <html lang='cs'>
             <body className='antialiased flex flex-col items-center overflow-x-hidden'>
