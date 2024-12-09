@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
         images: [
             {
-                url: '/_next/static/media/OpenGraphImage.978afceb.jpg',
+                url: 'https://github.com/jindrahabarta/avantagardaolomouc/blob/main/src/app/OpenGraphImage.jpg?raw=true',
                 width: 1200, // Šířka obrázku
                 height: 630, // Výška obrázku
                 alt: 'Solárium Avantgarda Olomouc',
