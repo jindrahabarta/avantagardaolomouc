@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
-import image from '@/../public/images/img1.jpg'
 import Tag from '../ui/Tag'
 import ButtonWithoutLink from '../Global/ButtonWithoutLink'
 import CrossIcon from '../icons/CrossIcon'
@@ -19,7 +18,7 @@ const CabinCard = ({
     price1,
     price2,
 }: {
-    img?: string
+    img: StaticImageData
     title: string
     tag: string
     price1: number
@@ -44,7 +43,7 @@ const CabinCard = ({
                     handleClose={() => setShowDetail(false)}
                     title={tag}
                     subtitle={title}
-                    img={image}
+                    img={img}
                     price1={price1}
                     price2={price2}
                 ></CabbinDetail>
@@ -53,7 +52,7 @@ const CabinCard = ({
                 <div className='bg-black/30 z-10 group-hover/cabbinCard:bg-black/40 absolute top-0 left-0 w-full h-full duration-200'></div>
 
                 <Image
-                    src={image}
+                    src={img}
                     alt={title + img}
                     width={400}
                     height={400}
@@ -95,13 +94,14 @@ const CabbinDetail = ({
     handleClose,
     title,
     subtitle,
+    img,
     price1,
     price2,
 }: {
     handleClose: () => void
-    img: StaticImageData
     title: string
     subtitle: string
+    img: StaticImageData
     price1: number
     price2: number
 }) => {
@@ -119,7 +119,7 @@ const CabbinDetail = ({
 
     return (
         <aside className='cardDetailMain opacity-0 bg-black/50 backdrop-blur-sm top-0 left-0 w-full h-full fixed z-40 flex justify-center items-end px-4'>
-            <div className='cardDetailWrapper translate-y-full text-black bg-white w-full sm:w-4/5 lg:w-2/3 h-[80vh] rounded-t-2xl p-8 pb-0 pr-0 overflow-y-auto relative'>
+            <div className='cardDetailWrapper max-w-[1392px] translate-y-full text-black bg-white w-full sm:w-4/5 lg:w-2/3 h-[80vh] rounded-t-2xl p-8 pb-0 pr-0 overflow-y-auto relative'>
                 <div className='h-full overflow-y-auto pr-4 pb-8'>
                     <div className='flex justify-between gap-2'>
                         <h2>{title}</h2>
@@ -132,74 +132,93 @@ const CabbinDetail = ({
                         </span>
                     </div>
                     <p className='font-semibold'>{subtitle}</p>
-                    {/* <p>{text}</p> */}
-
-                    <h3 className='mt-4'>Ceník</h3>
-                    <p>
-                        Běžná cena:{' '}
-                        <span className='font-semibold'>{price1} Kč/min</span>
-                    </p>
-                    <p>
-                        S permanentkou:{' '}
-                        <span className='font-semibold'>{price2} Kč/min</span>
-                    </p>
-
-                    <h3 className='mt-4'>Otevírací doba</h3>
-
-                    <p className='mt-2'>
-                        <span className='font-semibold'>Po - Pá:</span> 9:00 -
-                        20:00
-                    </p>
-                    <p className='mt-2'>
-                        <span className='font-semibold'>So:</span> 9:00 - 20:00
-                    </p>
-                    <p className='mt-2'>
-                        <span className='font-semibold'>Ne:</span> ZAVŘENO
-                    </p>
-                    <h3 className='mt-4'>Kontakt</h3>
-
-                    <ul>
-                        <li className='mt-2'>
-                            <Link
-                                href={
-                                    'https://www.google.com/maps/place/Sol%C3%A1rium+Avantgarda/@49.5962322,17.2470124,17z/data=!3m1!4b1!4m6!3m5!1s0x47124ef389ff5265:0x2e1bd6b9aa9f262a!8m2!3d49.5962288!4d17.2495873!16s%2Fg%2F1tlkb32f?hl=cs-CZ&entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
-                                }
-                                target='_blank'
-                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
-                            >
-                                <MapPinIcon className='w-6 h-auto fill-orange ' />
-                                <span className='h-fit'>
-                                    Sokolská 22 770 01 Olomouc
+                    <div className='flex flex-col gap-4 lg:flex-row justify-between mt-4'>
+                        <div>
+                            <h3>Ceník</h3>
+                            <p>
+                                Běžná cena:{' '}
+                                <span className='font-semibold'>
+                                    {price1} Kč/min
                                 </span>
-                            </Link>
-                        </li>
-                        <li className='mt-2'>
-                            <Link
-                                href={'mailto:info@solariumolomouc.cz'}
-                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
-                            >
-                                <EmailIcon className='w-6 h-auto fill-orange' />
-                                <span>info@solariumolomouc.cz</span>
-                            </Link>
-                        </li>
-                        <li className='mt-2'>
-                            <Link
-                                href={'tel:737331132'}
-                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
-                            >
-                                <PhoneIcon className='w-6 h-auto fill-orange' />
-                                <span>+420 737 331 132</span>
-                            </Link>
-                        </li>
-                    </ul>
+                            </p>
+                            <p>
+                                S permanentkou:{' '}
+                                <span className='font-semibold'>
+                                    {price2} Kč/min
+                                </span>
+                            </p>
 
-                    <Button
-                        variant='1sm'
-                        text='Objednat se'
-                        link='tel:737331132'
-                        id='order'
-                        className='mt-4'
-                    ></Button>
+                            <h3 className='mt-4'>Otevírací doba</h3>
+
+                            <p className='mt-2'>
+                                <span className='font-semibold'>Po - Pá:</span>{' '}
+                                9:00 - 20:00
+                            </p>
+                            <p className='mt-2'>
+                                <span className='font-semibold'>So:</span> 9:00
+                                - 20:00
+                            </p>
+                            <p className='mt-2'>
+                                <span className='font-semibold'>Ne:</span>{' '}
+                                ZAVŘENO
+                            </p>
+
+                            <h3 className='mt-4'>Kontakt</h3>
+
+                            <ul>
+                                <li className='mt-2'>
+                                    <Link
+                                        href={
+                                            'https://www.google.com/maps/place/Sol%C3%A1rium+Avantgarda/@49.5962322,17.2470124,17z/data=!3m1!4b1!4m6!3m5!1s0x47124ef389ff5265:0x2e1bd6b9aa9f262a!8m2!3d49.5962288!4d17.2495873!16s%2Fg%2F1tlkb32f?hl=cs-CZ&entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
+                                        }
+                                        target='_blank'
+                                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                                    >
+                                        <MapPinIcon className='w-6 h-auto fill-orange ' />
+                                        <span className='h-fit'>
+                                            Sokolská 22 770 01 Olomouc
+                                        </span>
+                                    </Link>
+                                </li>
+                                <li className='mt-2'>
+                                    <Link
+                                        href={'mailto:info@solariumolomouc.cz'}
+                                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                                    >
+                                        <EmailIcon className='w-6 h-auto fill-orange' />
+                                        <span>info@solariumolomouc.cz</span>
+                                    </Link>
+                                </li>
+                                <li className='mt-2'>
+                                    <Link
+                                        href={'tel:737331132'}
+                                        className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                                    >
+                                        <PhoneIcon className='w-6 h-auto fill-orange' />
+                                        <span>+420 737 331 132</span>
+                                    </Link>
+                                </li>
+                            </ul>
+
+                            <Button
+                                variant='1sm'
+                                text='Objednat se'
+                                link='tel:737331132'
+                                id='order'
+                                className='mt-4'
+                            ></Button>
+                        </div>
+
+                        <div className='rounded-2xl overflow-hidden '>
+                            <Image
+                                className='object-contain rounded-2xl max-w-[400px]'
+                                src={img}
+                                width={500}
+                                height={500}
+                                alt='Detailní fotka kabinky'
+                            ></Image>
+                        </div>
+                    </div>
 
                     <div className=' h-fit rounded-2xl overflow-hidden shadow-lg mt-4'>
                         <iframe

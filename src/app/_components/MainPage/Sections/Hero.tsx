@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Button from '../../Global/Button'
-import HeroImage from '@/../public/images/HeroImage3.jpg'
+import HeroImage from '@/../public/images/HeroImage.webp'
 
 const Hero = () => {
     return (

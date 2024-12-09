@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import SunbathingImg from '@/../public/images/Sunbathing2.jpg'
+import SunbathingImg from '@/../public/images/Sunbathing2.webp'
 
 const OpalovaniUvod = () => {
     return (

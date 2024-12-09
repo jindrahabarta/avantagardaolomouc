@@ -17,9 +17,8 @@ export default function Home() {
             <Hero></Hero>
             <AboutUs></AboutUs>
             <Cabbins></Cabbins>
-            {/* <Gallery></Gallery> */}
-            <QaA></QaA>
             <FindUs></FindUs>
+            <QaA></QaA>
         </div>
     )
 }

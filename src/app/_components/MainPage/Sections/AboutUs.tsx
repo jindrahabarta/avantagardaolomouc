@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import AboutImage from '@/../public/images/SolariumImage.jpg'
+import AboutImage from '@/../public/images/SolariumImage.webp'
 
 const AboutUs = () => {
     return (
