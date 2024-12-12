@@ -29,11 +29,13 @@ const FindUs = () => {
                         </li>
                         <li className='mt-3'>
                             <Link
-                                href={'mailto:info@solariumolomouc.cz'}
+                                href='mailto:&#105;&#110;&#102;&#111;&#64;&#115;&#111;&#108;&#97;&#114;&#105;&#117;&#109;&#111;&#108;&#111;&#109;&#111;&#117;&#99;&#46;&#99;&#122;'
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
                                 <EmailIcon className='w-6 h-auto fill-orange' />
-                                <span>info@solariumolomouc.cz</span>
+                                <span>
+                                    &#105;&#110;&#102;&#111;&#64;&#115;&#111;&#108;&#97;&#114;&#105;&#117;&#109;&#111;&#108;&#111;&#109;&#111;&#117;&#99;&#46;&#99;&#122;
+                                </span>
                             </Link>
                         </li>
                         <li className='mt-3'>

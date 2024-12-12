@@ -17,5 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             priority: 0.8,
         },
+        {
+            url: 'https://solariumolomouc.cz/kosmetika',
+            lastModified: new Date(),
+            priority: 0.8,
+        },
+        {
+            url: 'https://solariumolomouc.cz/permanentky',
+            lastModified: new Date(),
+            priority: 0.8,
+        },
     ]
 }

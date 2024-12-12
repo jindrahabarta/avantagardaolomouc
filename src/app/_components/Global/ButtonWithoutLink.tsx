@@ -20,7 +20,7 @@ const ButtonWithoutLink = ({ text, variant, className, id }: props) => {
             left: offsetX,
         })
         gsap.to('#buttonBg-' + id, {
-            width: 500,
+            width: 800,
             duration: 0.2,
         })
     }

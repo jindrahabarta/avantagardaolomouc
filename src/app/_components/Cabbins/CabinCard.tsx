@@ -49,7 +49,7 @@ const CabinCard = ({
                 ></CabbinDetail>
             )}
             <figure className=' absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden'>
-                <div className='bg-black/30 z-10 group-hover/cabbinCard:bg-black/40 absolute top-0 left-0 w-full h-full duration-200'></div>
+                <div className='bg-black/60 z-10 group-hover/cabbinCard:bg-black/40 absolute top-0 left-0 w-full h-full duration-200'></div>
 
                 <Image
                     src={img}
@@ -67,19 +67,26 @@ const CabinCard = ({
             <div className='relative w-full z-20'>
                 <h2 className='text-xl pb-2 duration-200'>{title}</h2>
 
-                <div className='flex  justify-between items-end'>
+                <div className='flex  justify-between items-end mb-2'>
                     <div>
-                        <p>Cena</p>
-                        <p className='font-bold text-lg'> {price / 2} Kč/min</p>
+                        <p className='text-sm'>Základní cena</p>
+                        <p className='font-bold text-lg'> {price} Kč/min</p>
                     </div>
-
-                    <ButtonWithoutLink
-                        text='Zjistit více'
-                        variant={'1sm'}
-                        className='self-end'
-                        id={title.replaceAll(' ', '-') + 'btn'}
-                    ></ButtonWithoutLink>
+                    <div>
+                        <p className='text-sm text-right'>
+                            Cena s permanentkou
+                        </p>
+                        <p className='font-bold text-lg text-right'>
+                            {price / 2} Kč/min
+                        </p>
+                    </div>
                 </div>
+                <ButtonWithoutLink
+                    text='Zjistit více'
+                    variant='1sm'
+                    className='w-full'
+                    id={tag.replaceAll(' ', '-') + 'btn'}
+                ></ButtonWithoutLink>
             </div>
         </div>
     )
@@ -134,7 +141,7 @@ const CabbinDetail = ({
                             <p>{text}</p>
                             <h3 className='mt-4'>Ceník</h3>
                             <p>
-                                Běžná cena:{' '}
+                                Základní cena:{' '}
                                 <span className='font-semibold'>
                                     {price} Kč/min
                                 </span>
@@ -180,11 +187,13 @@ const CabbinDetail = ({
                                 </li>
                                 <li className='mt-2'>
                                     <Link
-                                        href={'mailto:info@solariumolomouc.cz'}
+                                        href='mailto:&#105;&#110;&#102;&#111;&#64;&#115;&#111;&#108;&#97;&#114;&#105;&#117;&#109;&#111;&#108;&#111;&#109;&#111;&#117;&#99;&#46;&#99;&#122;'
                                         className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                                     >
                                         <EmailIcon className='w-6 h-auto fill-orange' />
-                                        <span>info@solariumolomouc.cz</span>
+                                        <span>
+                                            &#105;&#110;&#102;&#111;&#64;&#115;&#111;&#108;&#97;&#114;&#105;&#117;&#109;&#111;&#108;&#111;&#109;&#111;&#117;&#99;&#46;&#99;&#122;
+                                        </span>
                                     </Link>
                                 </li>
                                 <li className='mt-2'>

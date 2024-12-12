@@ -16,6 +16,7 @@ const Hero = () => {
                     width={1000}
                     height={1000}
                     priority
+                    placeholder='blur'
                 ></Image>
             </figure>
             <div className='w-full h-full relative pt-20 sm:pt-36 flex gap-20 z-20'>

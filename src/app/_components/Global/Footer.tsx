@@ -34,22 +34,10 @@ const Footer = () => {
                                 <span className=' font-semibold'>DIČ: </span>
                                 CZ7705294036
                             </li>
-                            {/* <li>
-                                <span className=' font-semibold'>Tel: </span>
-                                <Link href={'tel:+420737331132'}>
-                                    +420 737 331 132
-                                </Link>
-                            </li>
-                            <li>
-                                <span className=' font-semibold'>Email: </span>
-                                <Link href={'mailto:info@solariumolomouc.cz'}>
-                                    info@solariumolomouc.cz
-                                </Link>
-                            </li> */}
                         </ul>
                         <div className='flex gap-2 mt-4'>
                             <Link
-                                href={'mailto:info@solariumolomouc.cz'}
+                                href='mailto:&#105;&#110;&#102;&#111;&#64;&#115;&#111;&#108;&#97;&#114;&#105;&#117;&#109;&#111;&#108;&#111;&#109;&#111;&#117;&#99;&#46;&#99;&#122;'
                                 className='w-7 h-7 bg-orange rounded-full flex justify-center items-center group/FooterLink'
                             >
                                 <EmailIcon className='w-3 h-fit fill-white group-hover/FooterLink:rotate-12 transition-all duration-200 ease-linear'></EmailIcon>
@@ -134,7 +122,7 @@ const Footer = () => {
                 <div className='bg-silver h-[1px] my-5'></div>
 
                 <div className='flex justify-center'>
-                    <p>
+                    <p className='text-sm'>
                         Web vytvořil{' '}
                         <Link
                             target='_blank'
