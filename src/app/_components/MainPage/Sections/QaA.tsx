@@ -4,7 +4,7 @@ import Accordion from '../../Global/Accordion'
 
 const QaA = () => {
     return (
-        <section className='py-10 flex flex-col items-center'>
+        <section id='faq' className='py-10 flex flex-col items-center'>
             <h1>Otázky a odpovědi</h1>
             <div className='p-4 shadow-md border border-black rounded-2xl w-full lg:w-[800px] mt-4'>
                 <Accordion

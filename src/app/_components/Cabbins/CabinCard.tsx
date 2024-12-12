@@ -14,15 +14,15 @@ import MapPinIcon from '../icons/MapPinIcon'
 const CabinCard = ({
     img,
     title,
+    text,
     tag,
-    price1,
-    price2,
+    price,
 }: {
     img: StaticImageData
     title: string
+    text: string
     tag: string
-    price1: number
-    price2: number
+    price: number
 }) => {
     const [showDetail, setShowDetail] = useState(false)
 
@@ -42,10 +42,10 @@ const CabinCard = ({
                 <CabbinDetail
                     handleClose={() => setShowDetail(false)}
                     title={tag}
+                    text={text}
                     subtitle={title}
                     img={img}
-                    price1={price1}
-                    price2={price2}
+                    price={price}
                 ></CabbinDetail>
             )}
             <figure className=' absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden'>
@@ -53,7 +53,7 @@ const CabinCard = ({
 
                 <Image
                     src={img}
-                    alt={title + img}
+                    alt={'Obrázek' + title}
                     width={400}
                     height={400}
                     className='object-cover w-full h-full group-hover/cabbinCard:scale-105 duration-200'
@@ -70,12 +70,9 @@ const CabinCard = ({
                 <div className='flex  justify-between items-end'>
                     <div>
                         <p>Cena</p>
-                        <p className='font-bold text-lg'> {price1} Kč/min. </p>
+                        <p className='font-bold text-lg'> {price / 2} Kč/min</p>
                     </div>
-                    {/* <div className='text-right'>
-                        <p>S permanentkou</p>
-                        <p className='font-bold text-lg'> {price} Kč/min. </p>
-                    </div> */}
+
                     <ButtonWithoutLink
                         text='Zjistit více'
                         variant={'1sm'}
@@ -93,17 +90,17 @@ export default CabinCard
 const CabbinDetail = ({
     handleClose,
     title,
+    text,
     subtitle,
     img,
-    price1,
-    price2,
+    price,
 }: {
     handleClose: () => void
     title: string
+    text: string
     subtitle: string
     img: StaticImageData
-    price1: number
-    price2: number
+    price: number
 }) => {
     useEffect(() => {
         const openTl = gsap.timeline({ defaults: { duration: 0.2 } })
@@ -132,19 +129,20 @@ const CabbinDetail = ({
                         </span>
                     </div>
                     <p className='font-semibold'>{subtitle}</p>
-                    <div className='flex flex-col gap-4 lg:flex-row justify-between mt-4'>
+                    <div className='flex flex-col gap-4 lg:flex-row justify-between mt-2'>
                         <div>
-                            <h3>Ceník</h3>
+                            <p>{text}</p>
+                            <h3 className='mt-4'>Ceník</h3>
                             <p>
                                 Běžná cena:{' '}
                                 <span className='font-semibold'>
-                                    {price1} Kč/min
+                                    {price} Kč/min
                                 </span>
                             </p>
                             <p>
                                 S permanentkou:{' '}
                                 <span className='font-semibold'>
-                                    {price2} Kč/min
+                                    {price / 2} Kč/min
                                 </span>
                             </p>
 
@@ -215,7 +213,7 @@ const CabbinDetail = ({
                                 src={img}
                                 width={500}
                                 height={500}
-                                alt='Detailní fotka kabinky'
+                                alt={'Detailní obrázek kabinky' + title}
                             ></Image>
                         </div>
                     </div>

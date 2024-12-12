@@ -1,69 +1,69 @@
 import React from 'react'
 import CabinCard from '../../Cabbins/CabinCard'
-import HaproLuxura630 from '@/../public/images/cabbins/HAPRO-LUXURA-630-SLi-Intensive.webp'
-import ErgolineExcellence800 from '@/../public/images/cabbins/Ergoline Excellence.webp'
-import ErgolineInspiration450 from '@/../public/images/cabbins/ERGOLINE INSPIRATION 450.webp'
-import UltratanTower from '@/../public/images/cabbins/Ultratan Tower of power.webp'
-import SoltronXL from '@/../public/images/cabbins/SOLTRON XL 75 TWIN POWER.webp'
-import AproLuxura from '@/../public/images/cabbins/APRO-LUXURA-X7-42-SLi-iNTENSIVE.webp'
-import UWE from '@/../public/images/cabbins/VERTIKÁL - UWE i-dome.webp'
+import img1 from '@/../public/images/cabbins/1.webp'
+import img2 from '@/../public/images/cabbins/2.webp'
+import img3 from '@/../public/images/cabbins/3.webp'
+import img4 from '@/../public/images/cabbins/4.webp'
+import img5 from '@/../public/images/cabbins/5.webp'
+import img7 from '@/../public/images/cabbins/7.webp'
+import img8 from '@/../public/images/cabbins/8.webp'
 
 const cabbins = [
     {
         tag: 'Kabinka 1',
-        title: 'HAPRO LUXURA 630 SLi Intensive',
-        price1: 17,
-        price2: 7.5,
-        image: HaproLuxura630,
-        text: 'lorem ipsum',
+        title: 'Ergoline Prestige 1100 Gold',
+        price: 28,
+        image: img1,
+        text: 'Komfortní výkonné turbosolárium, 52 trubic, 4 obličejové zářiče 700W, ergonomicky tvarované lůžko. Aquafresh, aroma, klima.',
     },
     {
         tag: 'Kabinka 2',
-        title: 'ERGOLINE EXCELLENCE 800',
-        price1: 19,
-        price2: 9.5,
-        image: ErgolineExcellence800,
-        text: 'lorem ipsum',
+        title: 'Ergoline Excellence 800',
+        price: 26,
+        image: img2,
+        text: '51 trubic 160 W, 4 obličejové zářiče 520 W, 13 ramenních trubic 25 W',
     },
     {
         tag: 'Kabinka 3',
-        title: 'ERGOLINE INSPIRATION 450',
-        price1: 7.5,
-        price2: 15,
-        image: ErgolineInspiration450,
-        text: 'lorem ipsum',
+        title: 'Ergoline Inspiration 450',
+        price: 18,
+        image: img3,
+        text: 'Základní solárium . 42 trubic, 4x obličejové zářiče 400W',
     },
     {
         tag: 'Kabinka 4',
-        title: 'Vertikál - Ultratan Tower of power',
-        price1: 17,
-        price2: 8.5,
-        image: UltratanTower,
-        text: 'lorem ipsum',
+        title: 'Ultratan Tower of Power',
+        price: 18,
+        image: img4,
+        text: '52 trubic 180W 2m',
     },
     {
         tag: 'Kabinka 5',
-        title: 'SOLTRON XL 75 TWIN POWER',
-        price1: 19,
-        price2: 9.5,
-        image: SoltronXL,
-        text: 'lorem ipsum',
+        title: 'Soltron XL 75 Twin Power',
+        price: 24,
+        image: img5,
+        text: '51 trubic 160W, 4 obličejové zářiče 500W, výkonné vícestupňové větrání',
     },
     {
         tag: 'Kabinka 6',
-        title: 'APRO LUXURA X7 42 SLi iNTENSIVE',
-        price1: 14,
-        price2: 7,
-        image: AproLuxura,
-        text: 'lorem ipsum',
+        title: 'Ergoline Excellence 800',
+        price: 26,
+        image: img2,
+        text: '51 trubic 160 W, 4 obličejové zářiče 520 W, 13 ramenních trubic 25W',
     },
     {
         tag: 'Kabinka 7',
-        title: 'VERTIKÁL - UWE i-dome',
-        price1: 16,
-        price2: 8,
-        image: UWE,
-        text: 'lorem ipsum',
+        title: 'Luxura X7 42 SLI Intensive',
+        price: 17,
+        image: img7,
+        text: '42 trubic, 4 obličejové zářiče 400W',
+    },
+    {
+        tag: 'Kabinka 8',
+        title: 'UWE I-Dome',
+        price: 18,
+        image: img8,
+        text: '48 trubic 180W, 2m',
     },
 ]
 
@@ -76,10 +76,10 @@ const Cabbins = () => {
                     <CabinCard
                         key={i}
                         img={cabbin.image}
+                        text={cabbin.text}
                         title={cabbin.title}
                         tag={cabbin.tag}
-                        price1={cabbin.price1}
-                        price2={cabbin.price2}
+                        price={cabbin.price}
                     ></CabinCard>
                 ))}
             </div>

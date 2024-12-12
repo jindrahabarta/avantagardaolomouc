@@ -3,16 +3,17 @@ import React from 'react'
 import MapPinIcon from '../../icons/MapPinIcon'
 import EmailIcon from '../../icons/EmailIcon'
 import PhoneIcon from '../../icons/PhoneIcon'
+import FacebookIcon from '../../icons/FacebookIcon'
 
 const FindUs = () => {
     return (
-        <section id='kontakt' className='pt-24 pb-24'>
+        <section id='kontakt' className='pt-12 sm:pt-24'>
             <div className='flex flex-col sm:flex-row'>
                 <div className='flex-3 text-xl'>
                     <h2>Kontaktní informace</h2>
 
                     <ul>
-                        <li className='mt-2'>
+                        <li className='mt-3'>
                             <Link
                                 href={
                                     'https://www.google.com/maps/place/Sol%C3%A1rium+Avantgarda/@49.5962322,17.2470124,17z/data=!3m1!4b1!4m6!3m5!1s0x47124ef389ff5265:0x2e1bd6b9aa9f262a!8m2!3d49.5962288!4d17.2495873!16s%2Fg%2F1tlkb32f?hl=cs-CZ&entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D'
@@ -26,7 +27,7 @@ const FindUs = () => {
                                 </span>
                             </Link>
                         </li>
-                        <li className='mt-2'>
+                        <li className='mt-3'>
                             <Link
                                 href={'mailto:info@solariumolomouc.cz'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
@@ -35,13 +36,25 @@ const FindUs = () => {
                                 <span>info@solariumolomouc.cz</span>
                             </Link>
                         </li>
-                        <li className='mt-2'>
+                        <li className='mt-3'>
                             <Link
                                 href={'tel:737331132'}
                                 className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
                             >
                                 <PhoneIcon className='w-6 h-auto fill-orange' />
                                 <span>+420 737 331 132</span>
+                            </Link>
+                        </li>
+                        <li className='mt-3'>
+                            <Link
+                                href={
+                                    'https://www.facebook.com/avantgardaolomouc/?locale=cs_CZ'
+                                }
+                                target='_blank'
+                                className='flex items-center gap-2 w-fit text-black duration-200 h-fit'
+                            >
+                                <FacebookIcon className='w-6 h-auto fill-orange' />
+                                <span>Solárium Avantgarda</span>
                             </Link>
                         </li>
                     </ul>

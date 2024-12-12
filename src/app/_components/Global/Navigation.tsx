@@ -2,27 +2,41 @@
 import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import Image from 'next/image'
-
 import Logo from '@/../public/images/avantgarda logo.png'
 import HamburgerIcon from '../icons/HamburgerIcon'
 import Link from 'next/link'
 import gsap from 'gsap'
 import animationInit from '@/app/assets/animationInit'
 import { usePathname } from 'next/navigation'
+// import ChevronDownIcon from '../icons/ChevronDownIcon'
 
 const links = [
     {
-        text: 'Úvod',
+        text: 'Domů',
         link: '/#uvod',
+        // submenu: [
+        //     {
+        //         text: 'O soláriu',
+        //         link: '/#o-nas',
+        //     },
+        //     {
+        //         text: 'Kabinky',
+        //         link: '/#kabinky',
+        //     },
+        //     {
+        //         text: 'Otázky a odpovědi',
+        //         link: '/#faq',
+        //     },
+        // ],
     },
-    {
-        text: 'O soláriu',
-        link: '/#o-nas',
-    },
-    {
-        text: 'Kabinky',
-        link: '/#kabinky',
-    },
+    // {
+    //     text: 'O soláriu',
+    //     link: '/#o-nas',
+    // },
+    // {
+    //     text: 'Kabinky',
+    //     link: '/#kabinky',
+    // },
     {
         text: 'Galerie',
         link: '/galerie',
@@ -30,6 +44,14 @@ const links = [
     {
         text: 'Opalování',
         link: '/opalovani',
+    },
+    {
+        text: 'Permanentky',
+        link: '/permanentky',
+    },
+    {
+        text: 'Kosmetika',
+        link: '/kosmetika',
     },
 ]
 
@@ -91,7 +113,7 @@ const Navigation = () => {
 
     return (
         <header className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
-            <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden'>
+            <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden sm:overflow-visible'>
                 <nav className='w-full flex justify-between items-center gap-2 py-2'>
                     <Link href={'/#uvod'}>
                         <Image
@@ -105,19 +127,67 @@ const Navigation = () => {
 
                     <div className='sm:flex hidden gap-2 md:gap-10  items-center'>
                         <ul className='gap-4 flex items-center'>
-                            {links.map((link, i) => (
-                                <li
-                                    key={i}
-                                    className=' text-md md:text-lg lg:text-xl text-nowrap font-semibold'
-                                >
-                                    <Link
-                                        className='text-black hover:text-orange duration-200'
-                                        href={link.link}
+                            {links.map((link, i) => {
+                                return (
+                                    <li
+                                        key={i}
+                                        className=' text-md md:text-lg lg:text-xl text-nowrap font-semibold'
                                     >
-                                        {link.text}
-                                    </Link>
-                                </li>
-                            ))}
+                                        <Link
+                                            className='text-black hover:text-orange duration-200'
+                                            href={link.link}
+                                        >
+                                            {link.text}
+                                        </Link>
+                                    </li>
+                                )
+                                // if (link.submenu) {
+                                //     return (
+                                //         <div className='relative' key={i}>
+                                //             <li className='text-md md:text-lg lg:text-xl text-nowrap font-semibold flex items-center gap-1 group'>
+                                //                 <Link
+                                //                     className='text-black hover:text-orange duration-200'
+                                //                     href={link.link}
+                                //                 >
+                                //                     {link.text}
+                                //                 </Link>
+                                //                 <ChevronDownIcon className='w-4 group-hover:stroke-orange stroke-black group-hover:pt-1 duration-300'></ChevronDownIcon>
+
+                                //                 <ul className='w-fit hidden group-hover:block h-fit rounded-2xl p-4 bg-white shadow-md border-black/80 border top-10 -translate-x-[50%] absolute left-[50%]'>
+                                //                     {link.submenu.map(
+                                //                         (submenuLink, i) => (
+                                //                             <li key={i}>
+                                //                                 <Link
+                                //                                     href={
+                                //                                         submenuLink.link
+                                //                                     }
+                                //                                 >
+                                //                                     {
+                                //                                         submenuLink.text
+                                //                                     }
+                                //                                 </Link>
+                                //                             </li>
+                                //                         )
+                                //                     )}
+                                //                 </ul>
+                                //             </li>
+                                //         </div>
+                                //     )
+                                // } else {
+                                //     return (
+                                //         <li
+                                //             key={i}
+                                //             className=' text-md md:text-lg lg:text-xl text-nowrap font-semibold'
+                                //         >
+                                //             <Link
+                                //                 className='text-black hover:text-orange duration-200'
+                                //                 href={link.link}
+                                //             >
+                                //                 {link.text}
+                                //             </Link>
+                                //         </li>
+                                //     )
+                            })}
                         </ul>
 
                         <Button
