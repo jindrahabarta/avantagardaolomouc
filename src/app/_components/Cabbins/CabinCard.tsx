@@ -41,7 +41,7 @@ const CabinCard = ({
             {showDetail && (
                 <figure
                     onClick={() => setShowDetail(false)}
-                    className='cardDetailMain opacity-0 bg-black/50 backdrop-blur-sm top-0 left-0 w-full h-full fixed z-40 flex justify-center items-end px-4'
+                    className='cardDetailMain opacity-0 bg-black/50 backdrop-blur-sm top-0 left-0 w-full h-full fixed z-30 flex justify-center items-end px-4'
                 ></figure>
             )}
             {showDetail && (
@@ -128,7 +128,7 @@ const CabbinDetail = ({
     }, [])
 
     return (
-        <div className='cardDetailWrapper translate-y-full max-w-[1392px] text-black bg-white w-full sm:w-4/5 lg:w-2/3 h-[80vh] rounded-t-2xl p-8 pb-0 pr-0 overflow-y-auto fixed bottom-0 left-1/2 -translate-x-1/2 z-50 '>
+        <div className='cardDetailWrapper translate-y-full max-w-[1392px] text-black bg-white w-full sm:w-4/5 lg:w-2/3 h-[80vh] rounded-t-2xl p-8 pb-0 pr-0 overflow-y-auto fixed bottom-0 left-1/2 -translate-x-1/2 z-40 '>
             <div className='h-full overflow-y-auto pr-4 pb-8'>
                 <div className='flex justify-between gap-2 fixed left-0 top-0 w-full pr-2 pl-8 pt-8 pb-2 bg-white z-10'>
                     <h2>{title}</h2>
