@@ -3,7 +3,7 @@ import TypeCard from '../_Components/TypeCard'
 
 const TypyPleti = () => {
     return (
-        <section className='pt-24 pb-24'>
+        <section className='pt-24'>
             <h1>Typy pleti</h1>
             <p>
                 Jednotlivé typy pleti rozdělujeme do určitých skupin, podle toho

@@ -81,7 +81,7 @@ const ImageGallery = () => {
         //         </div>
         //     ))}
         // </div>
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 pb-24'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4'>
             <div className='rounded-2xl aspect-[4/5] overflow-hidden relative group/galleryImage'>
                 <Image
                     src={img5}

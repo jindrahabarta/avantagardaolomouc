@@ -21,12 +21,15 @@ const Hero = () => {
             </figure>
             <div className='w-full h-full relative pt-20 sm:pt-36 flex gap-20 z-20'>
                 <div className='flex-[3]'>
-                    <h1 className='text-white  max-w-[12em] text-4xl sm:text-5xl md:text-7xl'>
+                    <h1 className='text-white  max-w-[13em] text-4xl sm:text-5xl md:text-7xl'>
                         Solárium{' '}
                         <span className='text-orange inline-block bg-white px-4 py-2 rounded-2xl hover:text-white hover:bg-orange duration-200 cursor-pointer'>
                             Avantagarda
                         </span>
-                        <br /> U nás slunce nezapadá
+                        <br />{' '}
+                        <span className='text-3xl sm:text-4xl md:text-6xl'>
+                            U nás slunce nezapadá
+                        </span>
                     </h1>
                     <p className='text-xl sm:text-2xl text-gray-100 max-w-[28em]'>
                         Objevte moderní solárium v centru Olomouce, které nabízí

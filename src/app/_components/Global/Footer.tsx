@@ -9,7 +9,7 @@ import FacebookIcon from '../icons/FacebookIcon'
 
 const Footer = () => {
     return (
-        <footer className='w-full px-5 '>
+        <footer className='w-full mt-24'>
             <div className='bg-silver/70 rounded-2xl p-10 pb-2 shadow-sm'>
                 <div className='flex justify-between gap-10 flex-col sm:flex-row'>
                     <div className='flex-1'>

@@ -113,7 +113,7 @@ const Navigation = () => {
 
     return (
         <header className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
-            <div className='navBar w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden sm:overflow-visible'>
+            <div className='navBar max-w-[1392px] w-full px-4 py-2 bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden sm:overflow-visible'>
                 <nav className='w-full flex justify-between items-center gap-2 py-2'>
                     <Link href={'/#uvod'}>
                         <Image
@@ -131,7 +131,7 @@ const Navigation = () => {
                                 return (
                                     <li
                                         key={i}
-                                        className=' text-md md:text-lg lg:text-xl text-nowrap font-semibold'
+                                        className=' text-md sm:text-base lg:text-lg text-nowrap font-semibold'
                                     >
                                         <Link
                                             className='text-black hover:text-orange duration-200'
@@ -195,6 +195,7 @@ const Navigation = () => {
                             link='/#kontakt'
                             variant={'1sm'}
                             id='navigation'
+                            className='px-1 md:px-6'
                         ></Button>
                     </div>
 

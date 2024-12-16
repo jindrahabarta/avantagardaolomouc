@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const Permanentky = () => {
     return (
-        <div className='pt-32 pb-20 '>
+        <div className='pt-32 '>
             <h1 className='text-center'>Permanentky</h1>
             <p className='text-center max-w-[700px] m-auto'>
                 Získej kredit navíc při zakoupení permanentky za 500 nebo 1000

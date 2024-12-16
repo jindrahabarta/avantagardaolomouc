@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Kosmetika = () => {
     return (
-        <div className='pt-32 pb-32'>
+        <div className='pt-32'>
             <h1 className='text-center'>Kosmetika</h1>
             <p className='text-center max-w-[700px] m-auto'>
                 Objevte naši pečlivě vybranou kosmetiku, která podpoří vaši péči
