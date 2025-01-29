@@ -30,14 +30,7 @@ const links = [
             },
         ],
     },
-    // {
-    //     text: 'O soláriu',
-    //     link: '/#o-nas',
-    // },
-    // {
-    //     text: 'Kabinky',
-    //     link: '/#kabinky',
-    // },
+    ,
     {
         text: 'Galerie',
         link: '/galerie',
@@ -114,7 +107,7 @@ const Navigation = () => {
 
     return (
         <header className='fixed top-0 left-0 w-full flex justify-center px-2 sm:px-5 pt-2 z-50'>
-            <div className='navBar max-w-[1392px] w-full px-4  bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden sm:overflow-visible'>
+            <div className='navBar max-w-[1392px] w-full px-4 bg-white duration-200 border-b rounded-2xl border-black/20 border shadow-md overflow-hidden md:overflow-visible'>
                 <nav className='w-full flex justify-between items-center gap-2 h-20'>
                     <Link href={'/#uvod'}>
                         <Image
@@ -126,29 +119,18 @@ const Navigation = () => {
                         ></Image>
                     </Link>
 
-                    <div className='sm:flex hidden gap-2 md:gap-10 h-full items-center'>
+                    <div className='md:flex hidden gap-2 md:gap-10 h-full items-center'>
                         <ul className='gap-4 h-full flex items-center'>
                             {links.map((link, i) => {
-                                // return (
-                                //     <li
-                                //         key={i}
-                                //         className=' text-md sm:text-base lg:text-lg text-nowrap font-semibold'
-                                //     >
-                                //         <Link
-                                //             className='text-black hover:text-orange duration-200'
-                                //             href={link.link}
-                                //         >
-                                //             {link.text}
-                                //         </Link>
-                                //     </li>
-                                // )
+                                if (!link) return
+
                                 if (link.submenu) {
                                     return (
                                         <div
                                             className='relative group h-full flex items-center'
                                             key={i}
                                         >
-                                            <li className='text-md md:text-lg lg:text-xl text-nowrap font-semibold flex items-center cursor-pointer gap-1'>
+                                            <li className='text-md md:text-base lg:text-xl text-nowrap font-semibold flex items-center cursor-pointer gap-1'>
                                                 <Link
                                                     className='text-black py-2 group-hover:text-orange duration-200'
                                                     href={link.link}
@@ -157,7 +139,7 @@ const Navigation = () => {
                                                 </Link>
                                                 <ChevronDownIcon className='w-4 group-hover:stroke-orange stroke-black group-hover:pt-1 duration-300'></ChevronDownIcon>
                                                 <div className='h-fit pt-1 top-20 absolute left-0'>
-                                                    <ul className='w-fit hidden  group-hover:block h-fit rounded-xl p-4 bg-white shadow-md border-black/50 border '>
+                                                    <ul className='w-fit hidden group-hover:block h-fit rounded-xl p-4 bg-white shadow-md border-black/50 border '>
                                                         {link.submenu.map(
                                                             (
                                                                 submenuLink,
@@ -186,7 +168,7 @@ const Navigation = () => {
                                     return (
                                         <li
                                             key={i}
-                                            className=' text-md md:text-lg lg:text-xl text-nowrap font-semibold'
+                                            className=' text-md md:text-base lg:text-xl text-nowrap font-semibold'
                                         >
                                             <Link
                                                 className='text-black hover:text-orange duration-200'
@@ -215,7 +197,7 @@ const Navigation = () => {
                         onClick={() => openMobileMenu()}
                         className={`${
                             isPressed ? 'p-[2px]' : 'p-0'
-                        }  w-8 cursor-pointer block sm:hidden`}
+                        }  w-8 cursor-pointer block md:hidden`}
                     >
                         <HamburgerIcon
                             className='w-full'
@@ -225,20 +207,24 @@ const Navigation = () => {
                 </nav>
 
                 <ul className='linksList hidden text-center select-none'>
-                    {links.map((link, i) => (
-                        <li
-                            key={i}
-                            className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'
-                            onClick={() => openMobileMenu()}
-                        >
-                            <Link
-                                className='text-black hover:text-orange duration-200'
-                                href={link.link}
+                    {links.map((link, i) => {
+                        if (!link) return null
+
+                        return (
+                            <li
+                                key={i}
+                                className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'
+                                onClick={() => openMobileMenu()}
                             >
-                                {link.text}
-                            </Link>
-                        </li>
-                    ))}
+                                <Link
+                                    className='text-black hover:text-orange duration-200'
+                                    href={link.link}
+                                >
+                                    {link.text}
+                                </Link>
+                            </li>
+                        )
+                    })}
 
                     <li
                         className='text-xl text-nowrap font-semibold mt-2 opacity-0 navLink'

@@ -30,6 +30,9 @@ const PermCard = ({
                             className='mt-4'
                         ></Button>
                     </div>
+                    <p className='text-sm text-end sm:text-left mt-2'>
+                        *Objednat lze na tel.č.: 737 331 132
+                    </p>
                 </div>
                 <div className='flex items-center self-center w-44 sm:w-32 sm:group-hover:pb-3 duration-200'>
                     <Image
