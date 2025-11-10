@@ -122,13 +122,22 @@ const Footer = () => {
                 <div className='bg-silver h-[1px] my-5'></div>
 
                 <div className='flex justify-center'>
-                    <p className='text-sm'>
-                        Web vytvořil{' '}
+                    <p className='text-sm text-center'>
+                        Web vytvořilo studio
                         <Link
                             target='_blank'
-                            href={'https://jindrahabarta.netlify.a pp/'}
+                            href={'https://motionlabs.cz/'}
+                            className='ml-1'
+                            aria-label='Odkaz na studio Motion Labs'
                         >
-                            Jindřich Habarta
+                            <Image
+                                src={'/ml_logo.svg'}
+                                alt={'MotionLabs logo'}
+                                width={100}
+                                height={100}
+                                className='inline w-6 pb-1'
+                            />{' '}
+                            MotionLabs
                         </Link>
                     </p>
                 </div>

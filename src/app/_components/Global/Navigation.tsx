@@ -43,10 +43,10 @@ const links = [
         text: 'Permanentky',
         link: '/permanentky',
     },
-    {
-        text: 'Kosmetika',
-        link: '/kosmetika',
-    },
+    // {
+    //     text: 'Kosmetika',
+    //     link: '/kosmetika',
+    // },
 ]
 
 const Navigation = () => {
